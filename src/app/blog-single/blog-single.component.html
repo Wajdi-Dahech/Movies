@@ -1,0 +1,112 @@
+<!-- BEGIN | Header -->
+<header class="ht-header">
+	<div class="container">
+		<nav class="navbar navbar-default navbar-custom">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header logo">
+				    <div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					    <span class="sr-only">Toggle navigation</span>
+					    <div id="nav-icon1">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div>
+				    </div>
+				    <a routerLink="/"><img class="logo" src="./../../assets/images/logo1.png" alt="" width="119" height="58"></a>
+			    </div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav flex-child-menu menu-left">
+						<li class="hidden">
+							<a href="#page-top"></a>
+						</li>
+						<li class="first">
+							<a class="btn btn-default lv1" routerLink="/movies">movies</a>
+						</li>
+						<li class="first">
+							<a class="btn btn-default lv1" routerLink="/celebs">celebrities</a>
+						</li>
+						<li class="first">
+							<a class="btn btn-default lv1" routerLink="/blogs">news</a>
+						</li>
+						<li class="dropdown first">
+							<a class="btn btn-default lv1" routerLink="/profile">user</a>
+						</li>
+					</ul>
+				</div>
+			<!-- /.navbar-collapse -->
+	    </nav>
+	</div>
+</header>
+<!-- END | Header -->
+
+<div class="hero common-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="hero-ct">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<div class="buster-light">
+<!-- blog detail section-->
+<div class="page-single">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9 col-sm-12 col-xs-12">
+				<div class="blog-detail-ct">
+					<h1>{{blog.title}}</h1>
+					<span class="time">{{blog.postedAt}}</span>
+					<img src="{{blog.image}}" alt="">
+					{{blog.content}}
+
+					
+					<!-- share link -->
+					<div class="flex-it share-tag">
+						<div class="social-link">
+							<h4>Share it</h4>
+							<a><i class="ion-social-facebook"></i></a>
+							<a><i class="ion-social-twitter"></i></a>
+							<a><i class="ion-social-googleplus"></i></a>
+							<a><i class="ion-social-pinterest"></i></a>
+							<a><i class="ion-social-linkedin"></i></a>
+						</div>
+						<div class="right-it">
+							<h4>Tags</h4>
+							<a *ngFor="let t of blog.tags">{{t}},</a>
+						</div>
+					</div>
+					<!-- comment items -->
+					<div class="comments">
+						<h4>{{blog.comments.length}} Comments</h4>
+						<div class="cmt-item flex-it" *ngFor="let c of blog.comments">
+							<div class="author-infor">
+								<div class="flex-it2">
+									<h6><a>{{c.username}}</a></h6> <span class="time"> - {{c.time}}</span>
+								</div>
+								<p>{{c.comment}}</p>
+							</div>
+						</div>
+					</div>
+					<div class="comment-form">
+						<h4>Leave a comment</h4>
+						<form (ngSubmit)="onAddCommentSubmit()">
+							<div class="row">
+								<div class="col-md-12">
+									<textarea [(ngModel)]="newcomment" name="message" id="" placeholder="Enter Commment"></textarea>
+								</div>
+							</div>
+							<input class="submit" type="submit" placeholder="submit">
+						</form>
+					</div>
+					<!-- comment form -->
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<!-- end of  blog detail section-->
+		</div>

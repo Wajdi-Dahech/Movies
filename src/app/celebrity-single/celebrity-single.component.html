@@ -1,0 +1,236 @@
+<!-- BEGIN | Header -->
+<header class="ht-header">
+  <div class="container">
+    <nav class="navbar navbar-default navbar-custom">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header logo">
+        <div
+          class="navbar-toggle"
+          data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1"
+        >
+          <span class="sr-only">Toggle navigation</span>
+          <div id="nav-icon1">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <a routerLink="/"
+          ><img
+            class="logo"
+            src="./../../assets/images/logo1.png"
+            alt=""
+            width="119"
+            height="58"
+        /></a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div
+        class="collapse navbar-collapse flex-parent"
+        id="bs-example-navbar-collapse-1"
+      >
+        <ul class="nav navbar-nav flex-child-menu menu-left">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="first">
+            <a class="btn btn-default lv1" routerLink="/movies">movies</a>
+          </li>
+          <li class="first">
+            <a class="btn btn-default lv1" routerLink="/celebs">celebrities</a>
+          </li>
+          <li class="first">
+            <a class="btn btn-default lv1" routerLink="/blogs">news</a>
+          </li>
+          <li class="dropdown first">
+            <a class="btn btn-default lv1" routerLink="/profile">user</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </nav>
+  </div>
+</header>
+<!-- END | Header -->
+
+<div class="buster-light">
+  <div class="hero hero3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </div>
+  </div>
+  <!-- celebrity single section-->
+
+  <div class="page-single movie-single cebleb-single">
+    <div class="container">
+      <div class="row ipad-width">
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <div class="mv-ceb">
+            <img src="{{ celeb.mainimage }}" alt="" />
+          </div>
+        </div>
+        <div class="col-md-8 col-sm-12 col-xs-12">
+          <div class="movie-single-ct">
+            <h1 class="bd-hd">{{ celeb.name }}</h1>
+            <p class="ceb-single">{{ celeb.profession }}</p>
+            <div class="social-link cebsingle-socail">
+              <a><i class="ion-social-facebook"></i></a>
+              <a><i class="ion-social-twitter"></i></a>
+              <a><i class="ion-social-googleplus"></i></a>
+              <a><i class="ion-social-linkedin"></i></a>
+            </div>
+            <div class="movie-tabs">
+              <div class="tabs">
+                <ul class="tab-links tabs-mv">
+                  <li id="overviewLink">
+                    <a
+                      routerLink="{{ '/celeb/' + celebId + '/overviewceb' }}"
+                      (click)="goToOverview()"
+                      >Overview</a
+                    >
+                  </li>
+                  <li id="biographyLink">
+                    <a
+                      routerLink="{{ '/celeb/' + celebId + '/biography' }}"
+                      (click)="goToBiography()"
+                    >
+                      biography</a
+                    >
+                  </li>
+                  <li id="mediaLink">
+                    <a
+                      routerLink="{{ '/celeb/' + celebId + '/mediaceb' }}"
+                      (click)="goToMedia()"
+                    >
+                      Media</a
+                    >
+                  </li>
+                  <li id="filmographyLink">
+                    <a
+                      routerLink="{{ '/celeb/' + celebId + '/filmography' }}"
+                      (click)="goToFilmography()"
+                      >filmography</a
+                    >
+                  </li>
+                </ul>
+                <div class="tab-content">
+                  <div id="overviewceb" class="tab" style="margin: 5px">
+                    <div class="row">
+                      <div class="col-md-8 col-sm-12 col-xs-12">
+                        <p>{{ celeb.description }}</p>
+                      </div>
+                      <div class="col-md-4 col-xs-12 col-sm-12">
+                        <div class="sb-it">
+                          <h6>Fullname:</h6>
+                          <p>
+                            <a>{{ celeb.name }}</a>
+                          </p>
+                        </div>
+                        <div class="sb-it">
+                          <h6>Date of Birth:</h6>
+                          <p>{{ celeb.dob }}</p>
+                        </div>
+                        <div class="sb-it">
+                          <h6>Country:</h6>
+                          <p>{{ celeb.country }}</p>
+                        </div>
+                        <div class="sb-it">
+                          <h6>Height:</h6>
+                          <p>{{ celeb.height }}</p>
+                        </div>
+                        <div class="sb-it">
+                          <h6>Keywords:</h6>
+                          <p class="tags" *ngFor="let k of celeb.keywords">
+                            <span class="time"
+                              ><a>{{ k }}</a></span
+                            >
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="biography" class="tab" style="margin: 5px">
+                    <div class="row">
+                      <div class="rv-hd">
+                        <div>
+                          <h3>Biography of</h3>
+                          <h2>{{ celeb.name }}</h2>
+                        </div>
+                      </div>
+
+                      <p>{{ celeb.biography }}</p>
+                    </div>
+                  </div>
+                  <div id="mediaceb" class="tab" style="margin: 5px">
+                    <div class="row">
+                      <div class="rv-hd">
+                        <div>
+                          <h3>Photos & Videos of</h3>
+                          <h2>{{ celeb.name }}</h2>
+                        </div>
+                      </div>
+                      <div class="title-hd-sm">
+                        <h4>Videos <span></span></h4>
+                      </div>
+                      <div *ngFor="let v of celeb.videos">
+                        <div class="mvsingle-item media-item">
+                          <div class="vd-item">
+                            <div class="vd-it">
+                              <br />
+                              <a
+                                class="fancybox-media"
+                                target="_blank"
+                                href="{{ v.link }}"
+                                ><p>{{ v.title }}</p></a
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="title-hd-sm">
+                        <h4>Photos <span></span></h4>
+                      </div>
+                      <div class="mvsingle-item">
+                        <a
+                          class="img-lightbox"
+                          data-fancybox-group="gallery"
+                          *ngFor="let c of celeb.images"
+                          ><img src="{{ c }}" width="100" height="200" alt=""
+                        /></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="filmography" class="tab" style="margin: 5px">
+                    <div class="row">
+                      <div class="rv-hd">
+                        <div>
+                          <h3>Filmography of</h3>
+                          <h2>{{ celeb.name }}</h2>
+                        </div>
+                      </div>
+                      <!-- movie cast -->
+                      <div *ngFor="let f of celeb.films">
+                        <div class="mvcast-item">
+                          <div class="cast-it">
+                            <div class="cast-left cebleb-film">
+                              <div>
+                                <a>{{ f }}</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,144 @@
+<div>
+	<!--login form popup-->
+	<div class="login-wrapper" id="login-content">
+		<div class="login-content">
+			<a class="close">x</a>
+			<h3>Login</h3>
+			<form (ngSubmit)="onLoginSubmit()" novalidate>
+				<div class="row">
+					 <label for="username">
+						Username:
+						<input type="text" name="username" id="username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" [(ngModel)]="loginusername" required="required" />
+					</label>
+				</div>
+			   
+				<div class="row">
+					<label for="password">
+						Password:
+						<input type="password" name="password" id="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" [(ngModel)]="loginpassword" required="required" />
+					</label>
+				</div>
+				<div class="row">
+					<div class="remember">
+						<div>
+							<input type="checkbox" name="remember" value="Remember me"><span>Remember me</span>
+						</div>
+						<a>Forget password ?</a>
+					</div>
+				</div>
+			   <div class="row">
+					<button type="submit">Login</button>
+			   </div>
+			</form>
+			
+		</div>
+	</div>
+	<!--end of login form popup-->
+	<!--signup form popup-->
+	<div class="login-wrapper"  id="signup-content">
+		<div class="login-content">
+			<a class="close">x</a>
+			<h3>sign up</h3>
+			<form (ngSubmit)="onSignUpSubmit()" novalidate>
+				<div class="row">
+					 <label for="username-2">
+						Username:
+						<input type="text" name="username" id="username-2" [(ngModel)]="signupusername" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{8,20}$" required="required" />
+					</label>
+				</div>
+			   
+				<div class="row">
+					<label for="email-2">
+						your email:
+						<input type="email" name="email" id="email-2" [(ngModel)]="signupemail" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+					</label>
+				</div>
+				 <div class="row">
+					<label for="password-2">
+						Password:
+						<input type="password" name="password" id="password-2" [(ngModel)]="signuppassword" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+					</label>
+				</div>
+				 <div class="row">
+					<label for="repassword-2">
+						re-type Password:
+						<input type="password" name="password" id="repassword-2" placeholder="" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" required="required" />
+					</label>
+				</div>
+			   <div class="row">
+				 <button type="submit">sign up</button>
+			   </div>
+			</form>
+		</div>
+	</div>
+	<!--end of signup form popup-->
+	
+	<!-- BEGIN | Header -->
+	<header class="ht-header">
+		<div class="container">
+			<nav class="navbar navbar-default navbar-custom">
+					<div class="navbar-header logo">
+						<div class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<div id="nav-icon1">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<a routerLink="/"><img class="logo" src="./../../assets/images/logo1.png" alt="" width="119" height="58"></a>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse flex-parent" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav flex-child-menu menu-left">
+							<li class="hidden">
+								<a href="#page-top"></a>
+							</li>
+							<!--li class="first">
+								<a class="btn btn-default lv1" routerLink="/movies">movies</a>
+							</li>
+							<li class="first">
+								<a class="btn btn-default lv1" routerLink="/celebs">celebrities</a>
+							</li>
+							<li class="first">
+								<a class="btn btn-default lv1" routerLink="/blogs">news</a>
+							</li-->
+						</ul>
+						<ul class="nav navbar-nav flex-child-menu menu-right">
+							<li class="loginLink"><a href="#">Log In</a></li>
+							<li class="btn signupLink"><a href="#">Sign Up</a></li>
+						</ul>
+					</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			
+		</div>
+	</header>
+	<!-- END | Header -->
+	<div class="hero common-hero">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="hero-ct">
+						<h1> Welcome to Blockbuster Movies</h1>
+						<h2>Please LogIn to Continue...</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="slider movie-items">
+		<div class="container">
+			<div class="row">
+				<div class="social-link">
+					<p>Follow us: </p>
+					<a><i class="ion-social-facebook"></i></a>
+					<a><i class="ion-social-twitter"></i></a>
+					<a><i class="ion-social-googleplus"></i></a>
+					<a><i class="ion-social-youtube"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>		
+</div>

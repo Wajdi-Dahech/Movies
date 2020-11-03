@@ -1,0 +1,103 @@
+<div>
+  <!-- BEGIN | Header -->
+  <header class="ht-header">
+    <div class="container">
+      <nav class="navbar navbar-default navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header logo">
+          <div
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <div id="nav-icon1">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <a routerLink="/"
+            ><img
+              class="logo"
+              src="./../../assets/images/logo1.png"
+              alt=""
+              width="119"
+              height="58"
+          /></a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div
+          class="collapse navbar-collapse flex-parent"
+          id="bs-example-navbar-collapse-1"
+        >
+          <ul class="nav navbar-nav flex-child-menu menu-left">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="first">
+              <a class="btn btn-default lv1" routerLink="/movies">movies</a>
+            </li>
+            <li class="first">
+              <a class="btn btn-default lv1" routerLink="/celebs"
+                >celebrities</a
+              >
+            </li>
+            <li class="first">
+              <a class="btn btn-default lv1" routerLink="/blogs">news</a>
+            </li>
+            <li class="first">
+              <a class="btn btn-default lv1" routerLink="/profile">user</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </nav>
+    </div>
+  </header>
+  <!-- END | Header -->
+
+  <div class="buster-light">
+    <div class="hero common-hero">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="hero-ct">
+              <h1>movie listing</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page-single movie_list">
+      <div class="container">
+        <div class="row ipad-width2">
+          <div
+            class="col-md-8 col-sm-12 col-xs-12"
+            *ngFor="let movie of movies"
+          >
+            <div class="movie-item-style-2">
+              <img src="{{ movie.mainimage }}" alt="" />
+              <div class="mv-item-infor">
+                <h6>
+                  <a routerLink="{{ '/movie/' + movie._id + '/overview' }}"
+                    >{{ movie.name }}
+                    <span>{{ "(" + movie.release_date + ")" }}</span></a
+                  >
+                </h6>
+                <p class="rate">
+                  <i class="ion-android-star"></i
+                  ><span>{{ movie.average_rating }}</span> /10
+                </p>
+                <p class="describe">{{ movie.overview }}</p>
+                <p class="run-time">{{ "Run Time: " + movie.runtime }} mins.</p>
+                <p>Director: {{ movie.director }}</p>
+                <p>Stars: {{ movie.cast.slice(0, 5) | arrayToString }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

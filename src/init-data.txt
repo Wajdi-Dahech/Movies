@@ -1,0 +1,108 @@
+//Movies
+db.movies.insert({
+  "name":"Avengers: Age of Ultron",
+  "release_date":"May 1, 2015 (U.S.A)",
+  "average_rating":8,
+  "overview":"Tony Stark creates the Ultron Program to protect the world, but when the peacekeeping program becomes hostile, The Avengers go into action to try and defeat a virtually impossible enemy together. Earth's mightiest heroes must come together once again to protect the world from global extinction.",
+  "reviews":[{
+    "ratings":9,
+    "date":"17 December 2016",
+    "username":"hawaiipierson",
+    "review":"Best Marvel movie in my opinion",    
+    "rev_desc":"This is by far one of my favorite movies from the MCU. The introduction of new Characters both good and bad also makes the movie more exciting. giving the characters more of a back story can also help audiences relate more to different characters better, and it connects a bond between the audience and actors or characters. Having seen the movie three times does not bother me here as it is as thrilling and exciting every time I am watching it. In other words, the movie is by far better than previous movies (and I do love everything Marvel), the plotting is splendid (they really do out do themselves in each film, there are no problems watching it more than once."
+  },
+  {
+    "ratings":10,
+    "date":"17 December 2016",
+    "username":"some_user",
+    "review":"Just about as good as the first one!  ",    
+    "rev_desc":"Avengers Age of Ultron is an excellent sequel and a worthy MCU title! There are a lot of good and one thing that feels off in my opinion.\nTHE GOOD:First off the action in this movie is amazing, to buildings crumbling, to evil blue eyed robots tearing stuff up, this movie has the action perfectly handled. And with that action comes visuals. The visuals are really good, even though you can see clearly where they are through the movie, but that doesn't detract from the experience. While all the CGI glory is taking place, there are lovable characters that are in the mix. First off the original characters, Iron Man, Captain America, Thor, Hulk, Black Widow, and Hawkeye, are just as brilliant as they are always. And Joss Whedon fixed my main problem in the first Avengers by putting in more Hawkeye and him more fleshed out. Then there is the new Avengers, Quicksilver, Scarletwich, and Vision, they are pretty cool in my opinion. Vision in particular is pretty amazing in all his scenes.\nTHE BAD:The beginning of the film it's fine until towards the second act and there is when it starts to feel a little rushed. Also I do feel like there are scenes missing but there was talk of an extended version on Blu-Ray so that's cool."
+  },
+  {
+    "ratings":1,
+    "date":"26 March 2017",
+    "username":"christopherfreeman",
+    "review":"One of the most boring exepirences from watching a movie",    
+    "rev_desc":"I can't right much... it's just so forgettable...Okay, from what I remember, I remember just sitting down on my seat and waiting for the movie to begin. 5 minutes into the movie, boring scene of Tony Stark just talking to his 'dead' friends saying it's his fault. 10 minutes in: Boring scene of Ultron and Jarvis having robot space battles(I dunno:/). 15 minutes in: I leave the theatre.2nd attempt at watching it: I fall asleep. What woke me up is the next movie on Netflix when the movie was over.\nBottemline: It's boring...10/10 because I'm a Marvel Fanboy"
+  },
+  {
+    "ratings":8,
+    "date":"26 March 2017",
+    "username":" johnnylee",
+    "review":"Impressive Special Effects and Cast",    
+    "rev_desc":"The Avengers raid a Hydra base in Sokovia commanded by Strucker and they retrieve Loki's scepter. They also discover that Strucker had been conducting experiments with the orphan twins Pietro Maximoff (Aaron Taylor-Johnson), who has super speed, and Wanda Maximoff (Elizabeth Olsen), who can control minds and project energy. Tony Stark (Robert Downey Jr.) discovers an Artificial Intelligence in the scepter and convinces Bruce Banner (Mark Ruffalo) to secretly help him to transfer the A.I. to his Ultron defense system. However, the Ultron understands that is necessary to annihilate mankind to save the planet, attacks the Avengers and flees to Sokovia with the scepter. He builds an armature for self-protection and robots for his army and teams up with the twins. The Avengers go to Clinton Barton's house to recover, but out of the blue, Nick Fury (Samuel L. Jackson) arrives and convinces them to fight against Ultron. Will they succeed?\n'Avengers: Age of Ultron' is an entertaining adventure with impressive special effects and cast. The storyline might be better, since most of the characters do not show any chemistry. However, it is worthwhile watching this film since the amazing special effects are not possible to be described in words. Why Pietro has to die is also not possible to be explained. My vote is eight."
+  }],
+  "cast":[{
+    "cast_name":"Robert Downey Jr.",
+    "cast_img":"../../assets/images/uploads/cast1.jpg",
+    "role":"... Iron Man"    
+  },
+  {
+    "cast_name":"Chris Hemsworth",
+    "cast_img":"../../assets/images/uploads/cast2.jpg",
+    "role":"... Thor"    
+  },
+  {
+    "cast_name":"Mark Ruffalo",
+    "cast_img":"../../assets/images/uploads/cast3.jpg",
+    "role":"... Bruce Banner/ Hulk"    
+  },
+  {
+    "cast_name":"Chris Evans",
+    "cast_img":"../../assets/images/uploads/cast5.jpg",
+    "role":"... Steve Rogers/ Captain America"    
+  },
+  {
+    "cast_name":"Scarlett Johansson",
+    "cast_img":"../../assets/images/uploads/cast4.jpg",
+    "role":"... Natasha Romanoff/ Black Widow"    
+  },
+  {
+    "cast_name":"Jeremy Renner",
+    "cast_img":"../../assets/images/uploads/cast6.jpg",
+    "role":"... Clint Barton/ Hawkeye"    
+  },
+  {
+    "cast_name":"James Spader",
+    "cast_img":"../../assets/images/uploads/cast7.jpg",
+    "role":"... Ultron"    
+  },
+  {
+    "cast_name":"Don Cheadle",
+    "cast_img":"../../assets/images/uploads/cast9.jpg",
+    "role":"... James Rhodes/ War Machine"    
+  }],
+  "mainimage":"../../assets/images/uploads/movie-single2.jpg",
+  "director":"Joss Whedon",
+  "writers":["Jack Kirby","Joe Simon","Roy Thomas","John Buscema"],
+  "producers":["Victoria Alonso","Mitchel Bell","Jamie Christopher","Louis D’Esposito","Jon Favreau"],  
+  "genres":"Action, Sci-Fi, Adventure",
+  "runtime":"141 min",
+  "keywords":["superhero","marvel universe","comic","blockbuster","final battle"],
+  "images":["../../assets/images/uploads/image1.jpg",
+          "../../assets/images/uploads/image2.jpg",
+          "../../assets/images/uploads/image3.jpg",
+          "../../assets/images/uploads/image4.jpg",
+          "../../assets/images/uploads/image5.jpg",
+          "../../assets/images/uploads/image6.jpg",
+          "../../assets/images/uploads/image7.jpg",
+          "../../assets/images/uploads/image8.jpg",
+          "../../assets/images/uploads/image9.jpg",
+          "../../assets/images/uploads/image10.jpg",
+          "../../assets/images/uploads/image1-1.jpg",
+          "../../assets/images/uploads/image12.jpg",
+          "../../assets/images/uploads/image13.jpg",
+          "../../assets/images/uploads/image14.jpg"],
+  "videos":[
+    {"vid_img":"../../assets/images/uploads/vd-item1.jpg", "vid_name":"Trailer:  Watch New Scenes","vid_link":"https://www.youtube.com/embed/tmeOjFno6Do"},
+    {"vid_img":"../../assets/images/uploads/vd-item2.jpg", "vid_name":"Featurette: “Avengers Re-Assembled", "vid_link":"https://www.youtube.com/embed/9rJaeqMle8U"},
+    {"vid_img":"../../assets/images/uploads/vd-item3.jpg", "vid_name":"Interview: Robert Downey Jr", "vid_link":"https://www.youtube.com/embed/fnB9sv4BxPo"},
+    {"vid_img":"../../assets/images/uploads/vd-item4.jpg", "vid_name":"Interview: Scarlett Johansson","vid_link":"https://www.youtube.com/embed/k5kyUkNlcOM"}]  
+});
+
+//Celebs
+db.celebs.insert({ "name" : "Hugh Jackman", "age" : 54, "country" : "AUS", "description" : "Hugh Michael Jackman is an Australian actor, singer, multi-instrumentalist, dancer and producer. Jackman has won international recognition for his roles in major films, notably as superhero, period, and romance characters.", "profession" : "Actor", "mainimage" : "https://vignette.wikia.nocookie.net/riseoftheguardians/images/6/6b/Hugh-Jackman.jpg/revision/latest/scale-to-width-down/340?cb=20130304032628", "height" : "180 cm", "dob" : "24/5/1976", "biography" : "Hugh Jackman Biography", "keywords" : [ "hugh","jackman", "logan" ], "images" : [ "https://vignette.wikia.nocookie.net/riseoftheguardians/images/6/6b/Hugh-Jackman.jpg/revision/latest/scale-to-width-down/340?cb=20130304032628", "https://m.media-amazon.com/images/M/MV5BNDExMzIzNjk3Nl5BMl5BanBnXkFtZTcwOTE4NDU5OA@@._V1_UX214_CR0,0,214,317_AL__QL50.jpg" ], "videos" : [ {"title":"Hugh Jackman Makes a Surprise Visit!", "link":"https://www.youtube.com/watch?v=67-wK1iCc0s"}, {"title":"What Roles Has Hugh Jackman Been Considered For?", "link":"https://www.imdb.com/video/vi585612825"}], "films":["The Greatest Showman", "X-Men Apocalypse","Logan"]});
+
+
+//Blogs
+db.blogs.insert({ "title" : "Oscars 2021 The Ceremony May Be Postponed", "image" : "https://cdn.onebauer.media/one/radio-legacy/ae/eee4e/10697/f6795/6659f/d67e6/c201a/oscars.jpg?quality=50&width=1800&ratio=16-9&resizeStyle=aspectfill&format=jpg", "short_d" : "The Pandemic that has swept across the world disrupted everything about the entertainment industry. Now it's looking like it'll have further impact, as Variety brings word that the Academy of Motion Picture Arts and Sciences is considering postponing the 2021 Oscar ceremony.", "content" : "The Pandemic that has swept across the world disrupted everything about the entertainment industry. Now it's looking like it'll have further impact, as Variety brings word that the Academy of Motion Picture Arts and Sciences is considering postponing the 2021 Oscar ceremony.Key there is the word considering – no official decision has been made yet by the Academy, and there's still a chance the ceremony could still be held on its planned 28 February, 2021 date. The big question, of course, is what happens with Covid-19, whether it comes back in the autumn and whether people feel safe enough to return to such big gatherings as the Oscars by the time the event rolls around.It's just the latest change for awards season, which has seen festivals cancelled, moved online or re-scheduled and altered rules, including the Academy allowing films that had planned a cinema release, but ended up streaming, allowed to bypass the usual hard and fast rules about showing on screens in New York and Los Angeles to qualify.There's a good chance that even if the Oscars do happen, the rules may alter again to allow films that screen after the end of the year to be eligible. And these are far from the final changes we're likely to see in this crazy Corona-world.", "postedAt" : " 20th May 2020", "tags" : [ "Oscars", "pandemic", "2021" ], "category" : "Global", "comments" : [ { "username" : "KL Prakash", "comment" : "Would people want a movie tribute show instead? Have it as a benefit fundraiser for independent theaters and people who work in the crew. That way they can sneak in this years In Memoriam as well", "time" : "23 May 2020" }, { "username" : "ABCD", "comment" : "Their entire existence is about recognizing and rewarding quality work(whether or not you agree with their choices). No need for them to shove their head under the sand and ignore the giant context of 2020 that prevents so many movies from being made/finished/released.", "time" : "24 May 2020" } ] });
